@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  text-wrap: balance;
+}
+
+p,
+li,
+figcaption{
+  text-wrap: pretty;
+  max-width: 65ch;
+}
+
+
+// body > :is(header, footer),
+// main,
+// section,
+// article{
+//   container-type: inline-size;
+// }
