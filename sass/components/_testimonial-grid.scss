@@ -1,0 +1,56 @@
+@use "../abstracts/" as *;
+
+.testimonial-grid{
+
+    &__layout{
+        display: grid;
+        gap: $testimonial-grid-gap;
+        grid-template-areas:
+        "one"
+        "two"
+        "three"
+        "four"
+        "five";
+
+        &>:nth-child(1){
+            background-color: $color-accent-500;
+            grid-area: one;
+        }
+        &>:nth-child(2){
+            background-color: $color-primary-600;
+            grid-area: two;
+        }
+        &>:nth-child(3){
+            background-color: $color-neutral-000;
+            grid-area: three;
+        }
+        &>:nth-child(4){
+            background-color: $color-primary-800;
+            grid-area: four;
+        }
+        &>:nth-child(5 ){
+            background-color: $color-neutral-000;
+            grid-area: five;
+        }
+    }
+
+    @include mq(38.875rem){
+        max-width: 38.875rem;
+        margin-inline: auto;
+    }
+
+    @include mq(90rem){
+        max-width: unset;
+
+        &__layout{
+            max-width: 69.375rem;
+            gap: $testimonial-grid-gap-large;
+            margin-inline: auto;
+            grid-template-columns: repeat(4, 1fr );
+            grid-template-areas: 
+            "one one two five"
+            "three four four five";
+        }
+    }
+
+}

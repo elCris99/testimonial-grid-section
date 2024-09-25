@@ -2,7 +2,7 @@
 @use "typography" as *;
 @use "sizes" as *;
 
-$active-theme: $light;
+$active-theme: $default;
 $enable-media-query-dark-mode: false;
 
 // Contextual
@@ -47,8 +47,8 @@ $heading-font-family: $font-family-accent;
 $heading-color-default: $color-neutral-900;
 $heading-font-weight: $font-weight-bold;
 $heading-letter-spacing: $letter-spacing-loose;
-$heading-line-height: 1.1;
-$heading-text-transform: uppercase;
+$heading-line-height: $size-6;
+$heading-text-transform: none;
 
 $heading-1-font-size: $font-size-900;
 $heading-1-color: $heading-color-default;
@@ -114,36 +114,50 @@ $button-primary-color-hover: $color-neutral-100;
 $button-primary-background-hover: $color-primary-800;
 
 // cards
-$card-flow-spacing: $size-2;
+$card-flow-spacing: $size-4;
 $card-padding: $size-8;
 $card-shadow: $box-shadow-1;
-$card-border-radius: $border-radius-2;
-$card-background-default: $color-primary-100;
-$card-color-default: $body-text-color;
+$card-border-radius: $border-radius-1;
+$card-background-default: $color-primary-600;
+$card-color-default: rgba(255, 255, 255, .7);
 $card-font-family: $body-font-family;
-$card-line-height: 1.25;
-$card-heading-color-default: $card-color-default;
-$card-heading-font-size: $font-size-600;
+$card-line-height: 1.125rem;
+$card-heading-color-default: $color-neutral-000;
+$card-heading-font-size: $font-size-500;
+
+$card-user-gap: $size-4;
+$card-img-width: $size-7;
+$card-user-name-color: $card-heading-color-default;
+$card-user-name-font-size: $font-size-200;
+$card-user-verified: rgba(255, 255, 255, .5);
+$card-user-verified-dark: rgba(72, 85, 106, .5);
+$card-color-dark: rgba(72, 85, 106, .7);
+$card-heading-color-dark: $color-neutral-600;
+
+//testimonial grid
+$testimonial-grid-gap: $size-6;
+$testimonial-grid-gap-large: $size-7;
+
 
 // forms
-$form-label-color: $body-text-color;
-$form-label-font-family: $body-font-family;
-$form-label-font-weight: $font-weight-bold;
-$form-label-font-size: $body-font-size;
+// $form-label-color: $body-text-color;
+// $form-label-font-family: $body-font-family;
+// $form-label-font-weight: $font-weight-bold;
+// $form-label-font-size: $body-font-size;
 
-$form-input-color: $body-text-color;
-$form-input-font-family: $body-font-family;
-$form-input-font-weight: $font-weight-semi-bold;
-$form-input-font-size: $body-font-size;
-$form-input-background-color: $color-neutral-100;
-$form-input-border-default: 3px solid $color-primary-200;
-$form-input-border-focus: 3px solid $color-primary-400;
-$form-input-padding: $size-3;
-$form-input-border-radius: $border-radius-1;
+// $form-input-color: $body-text-color;
+// $form-input-font-family: $body-font-family;
+// $form-input-font-weight: $font-weight-semi-bold;
+// $form-input-font-size: $body-font-size;
+// $form-input-background-color: $color-neutral-100;
+// $form-input-border-default: 3px solid $color-primary-200;
+// $form-input-border-focus: 3px solid $color-primary-400;
+// $form-input-padding: $size-3;
+// $form-input-border-radius: $border-radius-1;
 
-$form-placeholder-color: $color-primary-300;
-$form-placeholder-font-family: $form-input-font-family;
-$form-placeholder-font-weight: $form-input-font-weight;
-$form-placeholder-font-size: $body-font-size;
+// $form-placeholder-color: $color-primary-300;
+// $form-placeholder-font-family: $form-input-font-family;
+// $form-placeholder-font-weight: $form-input-font-weight;
+// $form-placeholder-font-size: $body-font-size;
 
-$form-group-spacing: 0.5rem;
+// $form-group-spacing: 0.5rem;

@@ -11,7 +11,49 @@
   box-shadow: $card-shadow;
   border-radius: $card-border-radius;
 
+  &__user{
+    display: flex;
+    align-items: center;
+    gap: $card-user-gap;
+    color: $card-user-name-color;
+    font-size: $card-user-name-font-size;
+    line-height: 1;
+    margin-block-end: 1.125rem;
+
+    img{
+      border-radius: 50%;
+      max-width: $card-img-width;
+    }
+
+    .user__verified{
+      color: $card-user-verified;
+      font-size: 0.6875rem;
+      margin-block-start: 0.25rem;
+    }
+  }
+
   &__heading {
     @include heading($card-heading-font-size, $card-heading-color-default);
+  }
+
+  &__body{
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &:where([data-type="white-bg"]){
+    color: $card-color-dark;
+
+    .card__user{
+      color: $card-heading-color-dark;
+    }
+
+    .user__verified{
+      color: $card-user-verified-dark;
+    }
+
+    .card__heading{
+      color: $card-heading-color-dark;
+    }
   }
 }
